@@ -1,0 +1,14 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local Blacklisted = {
+    ["PlayerNameHere"] = true,
+    ["AnotherNameHere"] = true,
+}
+
+if Blacklisted[player.Name] then
+    player:Kick("You are blacklisted from using this script.")
+    return
+end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/weatherwess-lgtm/Azure/refs/heads/main/NewEarlyAccess"))()
